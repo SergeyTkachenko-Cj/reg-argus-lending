@@ -135,6 +135,11 @@ b {
 .title .green-text {
     font-weight: 600;
 }
+.sub-head {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
 input::-webkit-input-placeholder {
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
@@ -240,7 +245,7 @@ main .inner-wrapper {
 
 .form {
     border-radius: 10px;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(230, 223, 223);;
     width: 350px;
     flex: 0 0 350px;
     box-shadow: 0 15px 43px 0 rgba(0, 0, 0, 0.25);
@@ -1448,6 +1453,25 @@ footer .footer-row .text {
     outline: none;
 }
 
+.terms-giant-block {
+    padding: 2rem 0;
+}
+.terms-cont {
+    max-width: 750px;
+}
+.terms-block p {
+    margin: 2rem 0;
+}
+.terms-block ul {
+    margin-top: 2rem;
+}
+.terms-h1 {
+    font-size: 30px;
+}
+.terms-block li {
+    margin-left: 10px;
+}
+
 
 @media screen and (max-width: 1300px) {
     .container {
@@ -1818,7 +1842,7 @@ footer .footer-row .text {
         display: flex;
     }
     header .right-menu .phone {
-        font-size: 12px;
+        font-size: 16px;
         color: rgb(29, 138, 91);
         text-decoration: underline;
         text-underline-position: under;
@@ -1863,10 +1887,13 @@ footer .footer-row .text {
         font-size: 24px;
         line-height: 1;
     }
+    .sub-head {
+        font-size: 16px;
+    }
     main .form,
     .form {
-        width: 290px;
-        flex: 0 0 290px;
+        width: 400px;
+        flex: 0 0 400px;
         padding: 39px 20px;
     }
     main .form {
@@ -1878,7 +1905,7 @@ footer .footer-row .text {
         margin-bottom: 13px;
     }
     .form p {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.429;
         margin-bottom: 30px;
     }
@@ -2062,7 +2089,7 @@ footer .footer-row .text {
     }
     .why-trust-block .why-trust .block p,
     .why-trust-block .why-trust .block p a {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1.667;
     }
     .why-trust-block .d-flex.hide-desctop {
@@ -2119,7 +2146,7 @@ footer .footer-row .text {
         height: 48px;
     }
     .certificate-block .block p {
-        font-size: 12px;
+        font-size: 17px;
         line-height: 1.667;
     }
     .certificate-block .block .img:after {
@@ -2164,7 +2191,7 @@ footer .footer-row .text {
     }
     .five-steps-block .steps .step p.text,
     .five-steps-block .steps .step p.text a {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1.667;
         max-width: 100%;
     }
@@ -2250,7 +2277,7 @@ footer .footer-row .text {
     }
     .quote {
         padding: 0 5px;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.714;
     }
     .quote:before {
@@ -2401,7 +2428,7 @@ footer .footer-row .text {
         margin-bottom: 20px;
     }
     .how-much-block .how-much .left p {
-        font-size: 14px;
+        font-size: 17px;
         line-height: 1.714;
         margin-bottom: 30px;
     }
@@ -2450,14 +2477,14 @@ footer .footer-row .text {
         text-align: center;
     }
     .how-much-block .block .img svg {
-        width: 49px;
-        height: 49px;
+        width: 69px;
+        height: 69px;
     }
     .how-much-block .block .text {
-        font-size: 10px;
+        font-size: 16px;
         line-height: 1.8;
         text-align: center;
-        padding: 0 10px;
+        padding: 0 20px;
     }
     .gifts-block-wrapper {
         background-size: auto 600px;
@@ -2508,7 +2535,7 @@ footer .footer-row .text {
     }
     .gifts-block .download-block .block p {
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.714;
     }
     .gifts-block .download-block .block:last-child:after {
@@ -2541,12 +2568,12 @@ footer .footer-row .text {
         margin-bottom: 20px;
     }
     .document-list-block .document-list li {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.8;
         margin-bottom: 10px;
     }
     .document-list-block .toggle-list {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.714;
         padding-bottom: 5px;
     }
@@ -2688,7 +2715,7 @@ footer .footer-row .text {
         margin-bottom: 17px;
     }
     .form-block .left .sub-title {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
         line-height: 1.714;
         margin-bottom: 35px;
@@ -2749,7 +2776,7 @@ footer .footer-row .text {
         height: 28px;
     }
     footer .footer-row .phone {
-        font-size: 12px;
+        font-size: 16px;
         color: rgb(29, 138, 91);
         text-decoration: underline;
         text-underline-position: under;
@@ -2774,6 +2801,11 @@ footer .footer-row .text {
     .modal .form .close-btn {
         right: 0;
         transform: translate(0, -100%);
+    }
+}
+@media screen and (max-width: 411px) {
+    main .form, .form {
+        width: 100%;
     }
 }
 @media screen and (max-width: 319px) {
