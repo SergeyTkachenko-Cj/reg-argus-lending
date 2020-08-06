@@ -35,7 +35,7 @@ require './PHPMailer/SMTP.php';
             break;    
     }
 
-    $heading = ($person === '') ? 'Скачали заявку с reg.argus' : 'Скачали КП + подарок (reg.argus)';
+    $heading = ($person === '') ? 'Отправили заявку с reg.argus' : 'Скачали КП + подарок (reg.argus)';
 
     $subject = $heading;
     $message = "От: $name\n<br />\n<br />Телефон: $phone\n<br />\n<br />Почта: $email\n<br />\n<br />$person";
@@ -56,7 +56,16 @@ try {
     //Recipients
     $mail->From='argus@argus.group';
     $mail->FromName = $heading;
-    $mail->addAddress("tka4inni@gmail.com", "АРГУС");     // Add a recipient
+    // $mail->addAddress("tka4inni@gmail.com", "АРГУС");     // Add a recipient
+
+    $recipients = array(
+        '131@argus-eko.ru' => 'АРГУС',
+        'margo@argus-eko.ru' => 'АРГУС',
+     );
+     foreach($recipients as $email => $name)
+     {
+        $mail->addAddress($email, $name);
+     }
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML

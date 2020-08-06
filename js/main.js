@@ -157,7 +157,7 @@ $(function () {
 		}
 	});
 
-	$('.bot-send-btn').on('click', function (e) {
+	$('.bot-send-btn').on('click', function(e) {
 		e.preventDefault();
 
 		var form = $(this).parents('.form');
@@ -165,13 +165,12 @@ $(function () {
 		if (validateForm(form)) sendForm(form);
 	});
 
-	$('.form label input').on('keyup', function () {
+	$('.form label input').on('keyup', function() {
 		$(this).removeClass('error');
 	});
 
 	var timer;
 	function sendForm(form) {
-		console.log(form.serialize());
 		$.ajax({
 			type: 'POST',
 			url: 'send.php',

@@ -743,13 +743,15 @@ main .down svg {
     margin-bottom: 40px;
 }
 .quote {
-    width: 500px;
     font-size: 17px;
     font-weight: 500;
     color: rgba(51, 51, 51, .75);
     line-height: 1.714;
     position: relative;
     padding-left: 29px;
+}
+.quote-manager {
+    width: 500px;
 }
 .quote:before {
     content: '«';
@@ -1479,6 +1481,51 @@ footer .footer-row .text {
     margin-left: 10px;
 }
 
+/* Zadorma Widget */
+
+div.z-circle-message-button .z-c-m__button {
+    background: transparent;
+}
+
+div.z-circle-message-button .z-c-m__button:before {
+    border: 3px solid rgb(29, 138, 91);
+    background: url('https://reg.lab.argus-eko.ru/img/Irina_E.jpeg');
+    background-size: cover;
+}
+
+.z-circle-message-button .z-c-m__button img,
+.z-widget-sidebar .z-widget-sidebar-photo {
+    display: none;
+}
+
+div.z-circle-message-button .z-c-m__phone svg {
+    fill: rgb(29, 138, 91);
+}
+
+.z-widget-sidebar-call:before {
+    content: '';
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 3px solid rgb(29, 138, 91);
+    background: url('https://reg.lab.argus-eko.ru/img/Irina_E.jpeg');
+    background-size: cover;
+}
+
+div.z-widget-sidebar-callback button[type=submit] {
+    color: #fff;
+    border: 2px solid transparent;
+    background: rgb(29, 138, 91);
+}
+
+div.z-widget-sidebar-callback button[type=submit]:hover {
+    border: 2px solid grey;
+    background: rgb(29, 138, 91);
+}
+
+/* -------------- */
+
 @media screen and (max-width: 1300px) {
     .container {
         width: 1000px;
@@ -1497,7 +1544,7 @@ footer .footer-row .text {
     .form-block .left .sub-title {
         width: 500px;
     }
-    .quote {
+    .quote-manager {
         width: 400px;
     }
     .five-steps-block .steps {
@@ -1733,7 +1780,7 @@ footer .footer-row .text {
 
 @media screen and (max-width: 1050px) {
     .form-block .left .sub-title,
-    .quote {
+    .quote-manager {
         width: auto;
     }
     .form-block .right {
