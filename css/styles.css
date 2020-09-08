@@ -216,10 +216,11 @@ header .right-menu .phone {
 main {
     position: relative;
     min-height: 780px;
-    background-image: url("../img/main-bg.png"), url("../img/lines.svg");
+    background-image: url("../img/ellabo.jpg"), url("../img/lines.svg");
     background-repeat: no-repeat, repeat-x;
-    background-size: cover, auto;
-    background-position: center, center 0;
+    background-size: auto calc(100% + 40px), auto;
+    background-position: right center, center 0;
+    background-color: #ffffff;
     padding-top: 60px;
 }
 main .green-block-left {
@@ -311,21 +312,25 @@ main .inner-wrapper {
     line-height: 1.5;
 }
 main .left {
+    width: calc(100% - 400px);
     padding-top: 20px;
-    margin-right: 2rem;
 }
 main .left.mobile-title {
     display: none;
 }
 main .left .title {
-    margin-bottom: 75px;
+    margin-bottom: 45px;
+}
+main .left .green-btn {
+    margin-bottom: 60px;
+    width: 280px;
 }
 main .left .block {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 main .left .block .img {
     width: 54px;
@@ -337,10 +342,13 @@ main .left .block .img svg {
     width: 100%;
 }
 main .left .block h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: rgb(51, 51, 51);
     line-height: 1.5;
+}
+main .left .sub-title-mobile {
+    display: none;
 }
 main .form {
     position: relative;
@@ -1524,6 +1532,16 @@ div.z-widget-sidebar-callback button[type=submit]:hover {
     background: rgb(29, 138, 91);
 }
 
+div.z-circle-message-button .z-c-m__content {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+div.z-circle-message-button .z-c-m__close {
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 /* -------------- */
 
 @media screen and (max-width: 1300px) {
@@ -1576,6 +1594,9 @@ div.z-widget-sidebar-callback button[type=submit]:hover {
         font-size: 16px;
         padding-right: 20px;
     }
+    main {
+        background-image: url("../img/main-bg.png"), url("../img/lines.svg");
+    }
     main .inner-wrapper {
         padding-left: 40px;
     }
@@ -1587,6 +1608,7 @@ div.z-widget-sidebar-callback button[type=submit]:hover {
     }
     main .left {
         padding-right: 15px;
+        width: calc(100% - 200px);
     }
     .what-we-do-block .block {
         width: calc(100% / 3 - 20px);
@@ -1926,6 +1948,13 @@ div.z-widget-sidebar-callback button[type=submit]:hover {
     .reviews-block .btn-row .slick-arrow {
         width: 36px;
         height: 36px;
+    }
+    main .left {
+        display: flex;
+        flex-direction: column;
+    }
+    main .left button.green-btn {
+        align-self: center;
     }
     main .left.mobile-title {
         display: block;
