@@ -8,16 +8,19 @@ require './PHPMailer/Exception.php';
 require './PHPMailer/PHPMailer.php';
 require './PHPMailer/SMTP.php';
 
-    if(isset($_POST['name'])) {
+    if (isset($_POST['name'])) {
         $name = $_POST['name'];
     }
-    if(isset($_POST['phone'])) {
+    if (isset($_POST['phone'])) {
         $phone = $_POST['phone'];
     }
-    if(isset($_POST['email'])) {
+    if (isset($_POST['email'])) {
         $email = $_POST['email'];
     }
-    if(isset($_POST['download-file'])) {
+    if (isset($_POST['download-file'])) {
+        $downloadedFile = $_POST['download-file'];
+    }
+    if (isset($_POST['download-file'])) {
         $downloadedFile = $_POST['download-file'];
     }
 
@@ -38,7 +41,7 @@ require './PHPMailer/SMTP.php';
     $heading = ($person === '') ? 'Отправили заявку с reg.argus' : 'Скачали КП + подарок (reg.argus)';
 
     $subject = $heading;
-    $message = "От: $name\n<br />\n<br />Телефон: $phone\n<br />\n<br />Почта: $email\n<br />\n<br />$person";
+    $message = "name: $name\n<br />\n<br />phone: $phone\n<br />\n<br />email: $email\n<br />\n<br />$heading\n<br />\n<br />$person";
     $html = '<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>'.$message.'</body></html>';
 
 //Load Composer's autoloader
@@ -55,11 +58,11 @@ try {
 
     //Recipients
     $mail->From='argus@argus.group';
-    $mail->FromName = $heading;
+    $mail->FromName = 'Argus';
     // $mail->addAddress("tka4inni@gmail.com", "АРГУС");     // Add a recipient
 
     $recipients = array(
-        '131@argus-eko.ru' => 'АРГУС',
+        'advertising@argus-eko.ru' => 'АРГУС',
         'margo@argus-eko.ru' => 'АРГУС',
      );
      foreach($recipients as $email => $name)

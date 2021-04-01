@@ -188,11 +188,13 @@ header {
     position: relative;
     background-color: rgb(255, 255, 255);
     height: 110px;
+    z-index: 9;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.2);
 }
 header:after {
     content: '';
     opacity: 0.502;
-    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.2); */
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -2104,7 +2106,7 @@ div.z-circle-message-button .z-c-m__close {
         line-height: 1.4;
     }
     main .left .block {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         width: 240px;
     }
     main .left .block:nth-child(4) {
@@ -2139,7 +2141,6 @@ div.z-circle-message-button .z-c-m__close {
     }
     .what-we-do-block .title {
         margin-bottom: 39px;
-        max-width: 200px;
         margin-right: auto;
         margin-left: auto;
     }
